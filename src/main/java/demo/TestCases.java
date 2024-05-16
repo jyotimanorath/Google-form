@@ -3,20 +3,10 @@ package demo;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAmount;
-import java.util.List;
-
-import org.bouncycastle.oer.its.ieee1609dot2.basetypes.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class TestCases {
@@ -128,10 +118,7 @@ public class TestCases {
 
     private static void checkBox(ChromeDriver driver, By selector) throws Exception {
         System.out.println("Trying to check boxes/ radio buttons");
-        // Initialize the webdriver wait
-        //WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        // Wait till the element is visible
-       //wait.until(ExpectedConditions.visibilityOfElementLocated(selector));
+    
         Thread.sleep(2000);
         // Click the button
         WebElement element = driver.findElement(selector);
@@ -140,27 +127,8 @@ public class TestCases {
         System.out.println("Success!");
     }
      
-    // private static void ofSeconds(long seconds,long nanos){
-        
-    // }
-
+   
     private static String calculateDateTimeToString(String formatString, long offsetInMs) {
-//         LocalDateTime now = LocalDateTime.now();
-
-//         // Add the offset in milliseconds to the current date and time
-        
-//         long seconds = offsetInMs / 1000;
-//         long nanos = (offsetInMs % 1000) * 1000000;
-        
-//         LocalDateTime newDateTime = now.minus(Duration.ofSeconds(seconds, nanos));
-
-//         // Format the new date and time according to the provided format string
-//         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(formatString);
-//         String formattedDateTime = newDateTime.format(formatter);
-
-//         // Print the formatted date and time
-//         return formattedDateTime;
-// //     LocalDateTime now = LocalDateTime.now();
 
 LocalDateTime now = LocalDateTime.now();
 
